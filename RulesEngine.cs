@@ -17,12 +17,14 @@
         /// </summary>
         private List<IRule<T>> rules = new List<IRule<T>>();
 
+        public IRuleEngineContext Context { get; set; }
+
         /// <summary>
         /// Creates a new instance of the <see cref="RulesEngine"/> class.
         /// </summary>
         public RulesEngine()
         {
-            LoadRules();
+            //LoadRules();
         }
 
         /// <summary>
@@ -106,6 +108,10 @@
 
         public void AddRule(IRule<T> rule)
         {
+            // Set the current context
+            rule.Context = Context;
+
+            // Add the rule to the list
             rules.Add(rule);
         }
 

@@ -46,6 +46,7 @@
     <Compile Include="Conditions\GreaterThan.cs" />
     <Compile Include="Interfaces\ICondition.cs" />
     <Compile Include="Interfaces\IRule.cs" />
+    <Compile Include="Interfaces\IRuleEngineContext.cs" />
     <Compile Include="RuleResult.cs" />
     <Compile Include="Rules\BaseRule.cs" />
     <Compile Include="RulesEngine.cs" />

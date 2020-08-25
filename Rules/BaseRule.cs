@@ -6,6 +6,8 @@
 
     public abstract class BaseRule<T> : IRule<T>
     {
+        public IRuleEngineContext Context { get; set; }
+
         protected BaseRule()
         {
             Conditions = new List<ICondition>();

@@ -10,5 +10,6 @@ namespace HDO.Framework.RulesEngine
         IEnumerable<RuleResult> Apply(T obj);
         int Priority { get; }
         bool ShouldEnd { get; }
+        IRuleEngineContext Context { get; set; }
     }
 }
