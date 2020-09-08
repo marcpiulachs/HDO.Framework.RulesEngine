@@ -6,6 +6,10 @@
 
     public abstract class BaseRule<T> : IRule<T>
     {
+        public readonly int LOW_PRIORITY = 0;
+        public readonly int MEDIUM_PRIORITY = 50;
+        public readonly int HIGH_PRIORITY = 100;
+
         public IRuleEngineContext Context { get; set; }
 
         protected BaseRule()

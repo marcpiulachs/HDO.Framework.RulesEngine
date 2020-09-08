@@ -24,7 +24,7 @@ namespace HDO.Framework.RulesEngine
         /// <summary>
         /// The name of the Rule
         /// </summary>
-        public string Name { get; private set; }
+        public string Name { get; private set; } = "Unnamed";
 
         /// <summary>
         /// Creates a new instance of the <see cref="RuleResult"/> class.
@@ -75,7 +75,17 @@ namespace HDO.Framework.RulesEngine
         /// <returns></returns>
         public RuleResult WithMessage(string message)
         {
-            return new RuleResult(Applied, message);
+            return new RuleResult(Applied, Name, message);
+        }
+
+        /// <summary>
+        /// Sets the rule name.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        public RuleResult WithName(string name)
+        {
+            return new RuleResult(Applied, name, Message);
         }
 
         /// <summary>
@@ -86,7 +96,7 @@ namespace HDO.Framework.RulesEngine
         /// <returns></returns>
         public RuleResult WithMessage(string message, params object[] args)
         {
-            return new RuleResult(Applied, string.Format(message, args));
+            return new RuleResult(Applied, Name, string.Format(message, args));
         }
     }
 }
