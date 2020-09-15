@@ -39,14 +39,8 @@
             return Conditions.All(x => x.IsSatisfied());
         }
 
-        public virtual void Initialize(T obj)
-        {
-            throw new NotImplementedException();
-        }
+        public abstract void Initialize(T obj);
 
-        public virtual IEnumerable<RuleResult> Apply(T obj)
-        {
-            throw new NotImplementedException();
-        }
+        public abstract IEnumerable<RuleResult> Apply(T obj);
     }
 }

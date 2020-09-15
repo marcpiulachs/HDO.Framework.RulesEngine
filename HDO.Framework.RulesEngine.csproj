@@ -48,11 +48,14 @@
     <Compile Include="Interfaces\IRule.cs" />
     <Compile Include="Interfaces\IRuleEngineContext.cs" />
     <Compile Include="RuleResult.cs" />
+    <Compile Include="RuleResults.cs" />
     <Compile Include="Rules\BaseRule.cs" />
     <Compile Include="RulesEngine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Exceptions\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

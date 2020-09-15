@@ -115,9 +115,9 @@
             rules.Add(rule);
         }
 
-        public List<RuleResult> Run(T obj)
+        public RuleResults Run(T obj)
         {
-            List<RuleResult> results = new List<RuleResult>();
+            RuleResults results = new RuleResults();
 
             foreach (IRule<T> rule in rules.OrderByDescending(r => r.Priority))
             {
